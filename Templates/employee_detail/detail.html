@@ -1,0 +1,18 @@
+{% extends "home/home.html" %}
+{% block body%}
+<div class="container pt-5px">
+<div class="card mx-auto "  style="width: 18rem; ">
+    <img class="card-img-top pt-5px" src={{ employee.photo.url }} alt="Card image cap">
+    <div class="card-body " >
+      <p class="card-text"> Full Name:- {{employee.first_name}} {{ employee.last_name}}</p>
+      <p class="card-text"> Designation:- {{ employee.designation}}</p>
+      <p class="card-text"> Email:- {{ employee.email}}</p>
+      <p class="card-text"> Phone:- {{employee.phone_number}}</p>
+      
+      
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-primary"> Get Back To List</a>
+  </div>
+</div>
+
+{% endblock %}
